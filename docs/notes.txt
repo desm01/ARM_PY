@@ -1,0 +1,40 @@
+ARM:
+Only load / store instructions can access memory. 
+Means that incrementing a 32 bit pointer will require more instructions on arm. 
+You will need to:
+  Load value into register
+  Increment the value
+  Store result in memory
+
+Less clock cycles per instruction.
+ARM has two modes -> ARM mode and thumb mode.
+Thumb instructions can either be two or four bytes.
+
+ARM -> Most instructions can be used for conditional execution.
+Intel x86 -> Use the little-endian format
+Arm -> Was little endian before version 3, since then ARM became bi-endian and features a setting that allows you to switch
+
+Assembly language uses mnemonics -> Easier to remember
+
+Arm also lacks a division instruction.
+
+
+
+In HLL you can have variables. In assembly you have registers, variables [Specific ranges in memory] & the stack.
+
+A register is essentially a variable in the chip itself -> Very few registers.
+
+You put variables in addressable memory, there's a lot more bytes in memory than in registers.
+Memory and registers are essentially global variables:
+  I.E change in one function and you've changed for entire program.
+
+For local variables you can use the Stack:
+Stack is a special unit of memory. Uses last in first out approach. There's a special register called a stack pointer. SP -> Contains the address of the top of the stack.
+
+You can push variables onto the top of the stack when you need them, and pop them off when you're done.
+Poping restores registers to their original value.
+Stack pointer should clean up after itself -> Stack pointer dynamically grows and shrinks over time.
+
+Stacking registers inside a called function is only a guideline and not the law.
+
+
