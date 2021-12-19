@@ -53,6 +53,33 @@ Arithmetic Overflow (V) -> Like adding two positive numbers and getting a negati
 
 These condition flags are stores in the Program Status Register (PSR) -> Each processing instruction will set these flags depending on the outcome of the operation. Special versions of the branch instruction can use these flags to determine whether to make the jump.
 
+Looking at Assembly file:
+Four basic types of line formats:
+  - (Labels) lines ending with ':' 
+  - (Instructions)
+  - Lines starting with a period -> Not instructions, they are directives -> Hints to the assembler. Differs per assembler.
+  - Lines not starting with a period
+
+Some basic mmnemoincs:
+  - add
+  - ldr -> Load read something from memory
+  - b -> Branch / Jump to this memory address
+  - mov -> does an assignment
+
+In GAS, a function is preceded by a number of directives for alignment, code section and instruction set, and a '.global' directive to make it globally visible. And a label to mark the start of the function. Also thumb instructions require a '.thumb_func' or '.code 16' or '.thumb'
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
