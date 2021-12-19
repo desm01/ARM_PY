@@ -37,4 +37,35 @@ Stack pointer should clean up after itself -> Stack pointer dynamically grows an
 
 Stacking registers inside a called function is only a guideline and not the law.
 
+A special register known as the PC counter -> Prgram counter stores the address of the next instruction to be executed & updates.
+
+If you set the PC to a completly different address, it redirects the flow of the program.
+Technical term is branching. 
+
+Lets you do infinte loops and sub-routines.
+
+Full power of branching comes when certain conditions are met. With that you can build if / else blocks / Loops.
+The most common ones are:
+Zero (Z) -> If the result of the operation was zero
+Negative (N) -> If result was negative (I.E most significant bit set)
+Carry Bit (C) -> If the mostest significant bit is set (Like 32 / 64 bit operations)
+Arithmetic Overflow (V) -> Like adding two positive numbers and getting a negative number because the result got too big for the registers
+
+These condition flags are stores in the Program Status Register (PSR) -> Each processing instruction will set these flags depending on the outcome of the operation. Special versions of the branch instruction can use these flags to determine whether to make the jump.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
