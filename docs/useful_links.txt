@@ -1,0 +1,2 @@
+https://azeria-labs.com/writing-arm-assembly-part-1/
+https://www.coranac.com/tonc/text/asm.htm
