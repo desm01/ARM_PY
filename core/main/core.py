@@ -12,4 +12,4 @@ class Core:
         return reg.get_value() - reg2.get_value()
 
     def rsb(self, reg, number):
-        return number.get_value() - reg.get_value()
+        return number - reg.get_value()
