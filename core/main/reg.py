@@ -1,7 +1,7 @@
 class Reg:
 
-    def __init__(self, value):
-        self.__value = value
+    def __init__(self):
+        self.__value = 0
 
     def update_value(self, new_value):
         self.__value = new_value

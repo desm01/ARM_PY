@@ -2,10 +2,38 @@ from main.core import Core
 from main.reg import Reg
 
 def test_add():
-    assert 55 + 66 == Core().add(Reg(55), Reg(66))
+    reg1 = Reg()
+    reg1.update_value(100)
+
+    reg2 = Reg()
+    reg2.update_value(200)
+
+    core = Core()
+    core.add("R1", reg1, reg2)
+    
+    assert core.get_value("R1") == 100 + 200
 
 def test_sub():
-    assert 55-66 == Core().sub(Reg(55), Reg(66))
+    reg1 = Reg()
+    reg1.update_value(100)
+
+    reg2 = Reg()
+    reg2.update_value(200)
+
+    core = Core()
+    core.sub("R1", reg1, reg2)
+    
+    assert core.get_value("R1") == 100 - 200
 
 def test_rsb():
-    assert 120-80 == Core().rsb(Reg(80), 120)
+    core = Core()
+    reg1 = Reg()
+    reg1.update_value(20)
+
+    reg2 = Reg()
+    reg2.update_value(230)
+
+    core.rsb("R1", reg1, reg2)
+
+    assert core.get_value("R1") == 230 - 20
+
